@@ -1,0 +1,17 @@
+
+---
+- name: deploy and restart
+  hosts: Target
+  become: true
+  tasks:
+    - name: copy file
+      copy:
+        src: /storage/index.html
+        dest: /usr/share/nginx/html
+      notify:
+        - restart nginx
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
