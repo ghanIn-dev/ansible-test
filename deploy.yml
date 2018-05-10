@@ -6,7 +6,7 @@
   tasks:
     - name: copy file
       copy:
-        src: ~/awx/setup.py
+        src: /var/lib/nginx/file
         dest: /usr/share/nginx/html
       notify:
         - restart nginx
