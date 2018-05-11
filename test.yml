@@ -5,5 +5,5 @@
   tasks:
     - name: copy file
       copy:
-        src: /var/lib/awx/projects/site.yml
+        src: /storage/seokhyun.txt
         dest: /storage
