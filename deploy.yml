@@ -1,12 +1,12 @@
 
 ---
 - name: deploy and restart
-  hosts: Target
+  hosts: target
   become: true
   tasks:
     - name: copy file
       copy:
-        src: /var/lib/nginx/file
+        src: /var/lib/awx/projects/index.html
         dest: /usr/share/nginx/html
       notify:
         - restart nginx
