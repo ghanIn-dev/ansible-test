@@ -1,0 +1,9 @@
+---
+- name: deploy and restart
+  hosts: all
+  become: true
+  tasks:
+    - name: copy file
+      copy:
+        src: /var/lib/awx/projects/test.txt
+        dest: /var/lib/awx/
