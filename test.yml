@@ -1,6 +1,6 @@
 ---
 - name: deploy and restart
-  hosts: all
+  hosts: target
   become: true
   tasks:
     - name: copy file
