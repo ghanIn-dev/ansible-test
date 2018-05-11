@@ -1,9 +1,0 @@
----
-- name: deploy and restart
-  hosts: target
-  become: true
-  tasks:
-    - name: copy file
-      copy:
-        src: /var/lib/awx/projects/seohkyun.txt
-        dest: /storage
